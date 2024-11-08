@@ -20,9 +20,9 @@ class ClientPage extends StatelessWidget {
             leading: Icon(Icons.abc),
             title: Text(
               clients[index].name,
-              style: TextStyle(fontSize: 14),
+              style: const TextStyle(fontSize: 14),
             ),
-            subtitle: Text('Valor: ${clients[index].cnpjCpf}'),
+            subtitle: Text(clients[index].cnpjCpf),
           );
         },
       ),
