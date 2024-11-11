@@ -8,6 +8,7 @@ class OrdersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainAppBar(
       title: '',
+      widgetAppBar: Container(),
       widget: Text('data'),
     );
   }

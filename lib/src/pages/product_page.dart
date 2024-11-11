@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forca_vendas/src/components/main_app_bar.dart';
 import 'package:forca_vendas/src/data/products.dart';
 import 'package:forca_vendas/src/data/products_data.dart';
+import 'package:forca_vendas/src/utils/app_routes.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -12,6 +13,12 @@ class ProductPage extends StatelessWidget {
 
     return MainAppBar(
       title: '',
+      widgetAppBar: IconButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed(AppRoutes.productRegisterPage);
+        },
+        icon: const Icon(Icons.add),
+      ),
       widget: ListView.separated(
         itemCount: products.length,
         separatorBuilder: (BuildContext context, int index) => const Divider(),

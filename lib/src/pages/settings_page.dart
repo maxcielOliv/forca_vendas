@@ -17,6 +17,7 @@ class SettingsPage extends StatelessWidget {
 
     return MainAppBar(
         title: 'Configurações',
+        widgetAppBar: Container(),
         widget: ListView(
           padding: EdgeInsets.all(8),
           children: [

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:forca_vendas/src/home_page.dart';
 import 'package:forca_vendas/src/pages/client_page.dart';
+import 'package:forca_vendas/src/pages/client_register_page.dart';
 import 'package:forca_vendas/src/pages/product_page.dart';
+import 'package:forca_vendas/src/pages/product_register_page.dart';
 import 'package:forca_vendas/src/pages/settings_page.dart';
 import 'package:forca_vendas/src/utils/app_routes.dart';
 
@@ -28,6 +30,8 @@ class App extends StatelessWidget {
         AppRoutes.clientPage: (context) => const ClientPage(),
         AppRoutes.productPage: (context) => const ProductPage(),
         AppRoutes.settingsPage: (context) => const SettingsPage(),
+        AppRoutes.clientRegisterPage: (context) => const ClientRegisterPage(),
+        AppRoutes.productRegisterPage: (context) => const ProductRegisterPage()
       },
     );
   }

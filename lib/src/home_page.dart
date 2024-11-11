@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Força de Vendas'),
+        title: const Text('Força de Vendas'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -18,26 +18,40 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(context).appBarTheme.backgroundColor,
               ),
-              child: Text('Main Drawer'),
+              child: const Text('Main Drawer'),
             ),
             ListTile(
-              title: Text('Clientes'),
+              leading: const Icon(Icons.person_3_outlined),
+              title: const Text('Clientes'),
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.clientPage);
+              },
             ),
             ListTile(
-              title: Text('Clientes'),
+              leading: const Icon(Icons.production_quantity_limits),
+              title: const Text('Produtos'),
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.productPage);
+              },
             ),
             ListTile(
-              title: Text('Clientes'),
+              leading: const Icon(Icons.receipt_rounded),
+              title: const Text('Pedidos'),
+              onTap: () {
+                Navigator.of(context).pushNamed(AppRoutes.ordersPage);
+              },
             ),
             ListTile(
-              title: Text('Clientes'),
-            ),
-            ListTile(
-              leading: Icon(Icons.engineering),
-              title: Text('Configurações'),
+              leading: const Icon(Icons.engineering),
+              title: const Text('Configurações'),
               onTap: () {
                 Navigator.of(context).pushNamed(AppRoutes.settingsPage);
               },
+            ),
+            ListTile(
+              leading: const Icon(Icons.exit_to_app_rounded),
+              title: const Text('Sair'),
+              onTap: () {},
             ),
           ],
         ),
@@ -103,26 +117,26 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    MainTree(
-                      color: Colors.purple,
-                      icon: Icons.person_3_outlined,
-                      label: 'Receber Dados',
-                      onTap: () {},
-                    ),
-                    MainTree(
-                      color: Colors.brown,
-                      icon: Icons.person_3_outlined,
-                      label: 'Enviar Dados',
-                      onTap: () {},
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: [
+              //       MainTree(
+              //         color: Colors.purple,
+              //         icon: Icons.person_3_outlined,
+              //         label: 'Receber Dados',
+              //         onTap: () {},
+              //       ),
+              //       MainTree(
+              //         color: Colors.brown,
+              //         icon: Icons.person_3_outlined,
+              //         label: 'Enviar Dados',
+              //         onTap: () {},
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -130,7 +144,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     MainTree(
                       color: Colors.grey,
-                      icon: Icons.star,
+                      icon: Icons.engineering,
                       label: 'Configurações',
                       onTap: () {
                         Navigator.of(context).pushNamed(AppRoutes.settingsPage);
