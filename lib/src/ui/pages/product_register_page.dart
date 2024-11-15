@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forca_vendas/src/components/main_app_bar.dart';
+import 'package:forca_vendas/src/ui/widgets/main_app_bar.dart';
 
 class ProductRegisterPage extends StatelessWidget {
   const ProductRegisterPage({super.key});

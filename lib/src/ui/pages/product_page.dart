@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:forca_vendas/src/components/main_app_bar.dart';
-import 'package:forca_vendas/src/data/products.dart';
+import 'package:forca_vendas/src/ui/widgets/main_app_bar.dart';
+import 'package:forca_vendas/src/data/models/products.dart';
 import 'package:forca_vendas/src/data/products_data.dart';
 import 'package:forca_vendas/src/utils/app_routes.dart';
 

@@ -1,4 +1,4 @@
-import 'package:forca_vendas/src/data/products.dart';
+import 'package:forca_vendas/src/data/models/products.dart';
 
 const productsList = [
   Products(code: 1, name: 'Agulha de costura', value: 1),

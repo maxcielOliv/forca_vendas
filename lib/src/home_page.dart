@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forca_vendas/src/components/main_tree.dart';
+import 'package:forca_vendas/src/ui/widgets/main_tree.dart';
 import 'package:forca_vendas/src/utils/app_routes.dart';
 
 class HomePage extends StatelessWidget {
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     MainTree(
                       color: Colors.green,
-                      icon: Icons.person_3_outlined,
+                      icon: Icons.person_3,
                       label: 'Clientes',
                       onTap: () {
                         Navigator.of(context).pushNamed(AppRoutes.clientPage);
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                     ),
                     MainTree(
                       color: Colors.amber,
-                      icon: Icons.production_quantity_limits,
+                      icon: Icons.shopping_cart,
                       label: 'Produtos',
                       onTap: () {
                         Navigator.of(context).pushNamed(AppRoutes.productPage);
