@@ -9,7 +9,9 @@ class SettingsPage extends StatelessWidget {
     Widget itemList(String label, Function onTap) {
       return ListTile(
         title: Text(label),
-        onTap: onTap(),
+        onTap: () {
+          onTap();
+        },
       );
     }
 
@@ -45,7 +47,14 @@ class SettingsPage extends StatelessWidget {
             divider,
             itemList('PDF Pedido', () {}),
             divider,
-            itemList('Sobre', () {}),
+            itemList('Sobre', () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Criado por Maxciel'),
+                ),
+              );
+            }),
           ],
         ));
   }
