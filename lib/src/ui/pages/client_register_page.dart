@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:forca_vendas/src/ui/widgets/main_app_bar.dart';
+import 'package:forca_vendas/src/ui/widgets/main_text_form_field.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ClientRegisterPage extends StatefulWidget {
@@ -33,22 +34,19 @@ class _ClientRegisterPageState extends State<ClientRegisterPage> {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            TextFormField(
+            MainTextFormField(
               controller: nameController,
-              keyboardType: TextInputType.name,
-              decoration: const InputDecoration(
-                labelText: 'Nome',
-              ),
-              onSaved: (value) {
+              keybordType: TextInputType.name,
+              label: 'Nome',
+              onSaved: (String? value) {
                 value = nameController.text;
               },
             ),
-            TextFormField(
+            MainTextFormField(
               controller: cpfCnpjController,
-              decoration: const InputDecoration(
-                labelText: 'CPF ou CNPJ',
-              ),
-              onSaved: (value) {
+              keybordType: TextInputType.name,
+              label: 'CPF ou CNPJ',
+              onSaved: (String? value) {
                 value = cpfCnpjController.text;
               },
             ),

@@ -50,8 +50,8 @@ class SettingsPage extends StatelessWidget {
             itemList('Sobre', () {
               showDialog(
                 context: context,
-                builder: (context) => AlertDialog(
-                  title: Text('Criado por Maxciel'),
+                builder: (context) => const AlertDialog(
+                  title: Text('Todos os direitos reservados'),
                 ),
               );
             }),

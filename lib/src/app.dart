@@ -22,7 +22,9 @@ class App extends StatelessWidget {
           ),
         ),
         appBarTheme: const AppBarTheme(color: Colors.blueAccent),
+        useMaterial3: true,
       ),
+      darkTheme: ThemeData.dark(),
       routes: {
         AppRoutes.home: (context) => const HomePage(),
         AppRoutes.clientPage: (context) => const ClientPage(),
