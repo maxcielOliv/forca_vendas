@@ -15,7 +15,9 @@ class MainAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(
+          title,
+        ),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
         actions: [widgetAppBar],
       ),

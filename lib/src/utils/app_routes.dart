@@ -6,4 +6,5 @@ class AppRoutes {
   static const settingsPage = 'settings-page';
   static const clientRegisterPage = 'client-register-page';
   static const productRegisterPage = 'product-register-page';
+  static const exitPage = 'exit';
 }
